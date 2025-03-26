@@ -39,15 +39,12 @@ gameBoard.style.display="block"
         alert("Enter the both player name" );
         return;
     }
-    let currentPlayer=user1; 
- 
+ gameActive=true;
 
             message.textContent=`${currentPlayer.value} you're up!`
         })
  cells.forEach((cell)=>{
-    currentPlayer=user1; 
-        gameActive=true;
-    cell.addEventListener("click",()=>{
+        cell.addEventListener("click",()=>{
          
         if(gameActive){
             cell.innerText="X"
@@ -124,6 +121,12 @@ function checkWinner(){
 
 }
 restart.addEventListener("click",restartGame)
+
+
+
+
+
+
 
 
 
