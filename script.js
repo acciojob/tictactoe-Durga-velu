@@ -92,7 +92,7 @@ function checkWinner(){
         let position1=cells[pattern[0]].innerText
         let position2=cells[pattern[1]].innerText
         let position3=cells[pattern[2]].innerText
-        console.log(pattern)
+        
         if(position1 !=="" && position2!=="" && position3 !==""){
             if(position1===position2 && position2===position3){
                 
