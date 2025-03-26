@@ -1,5 +1,4 @@
 //your JS code here. If required.
-
 let user1=document.getElementById("player1")
 let user2=document.getElementById("player2")
 let startBtn=document.querySelector("#submit")
@@ -22,12 +21,14 @@ let winPattern=[
     [3,4,5],
     [6,7,8],
 ]
-
+let currentPlayer=user1; 
 function restartGame(){
-    let gameActive=true;
-    message.textContent="";
+   currentPlayer=user1
+     gameActive=true;
+       message.textContent=`${currentPlayer.value} you're up!`
     
     enablesCell();
+  
 }
 
  startBtn.addEventListener("click",()=>{
@@ -39,12 +40,15 @@ gameBoard.style.display="block"
         return;
     }
     let currentPlayer=user1; 
- gameActive=true;
+ 
 
             message.textContent=`${currentPlayer.value} you're up!`
         })
  cells.forEach((cell)=>{
+    currentPlayer=user1; 
+        gameActive=true;
     cell.addEventListener("click",()=>{
+         
         if(gameActive){
             cell.innerText="X"
             currentPlayer=user2
@@ -76,6 +80,7 @@ function enablesCell(){
     for(let cell of cells){
         cell.disabled=false;
         cell.innerText="";
+        
     }
 }
 
@@ -91,7 +96,7 @@ function checkWinner(){
         let position2=cells[pattern[1]].innerText
         let position3=cells[pattern[2]].innerText
         console.log(pattern)
-        if(position1 !=="" && position2!=="" && position3 !=="")
+        if(position1 !=="" && position2!=="" && position3 !==""){
             if(position1===position2 && position2===position3){
                 
                 if(position1==="X"){
@@ -111,11 +116,16 @@ function checkWinner(){
 
     }
 
+ 
     }
-  
+   
+   
 }
 
+}
 restart.addEventListener("click",restartGame)
+
+
 
 
 
