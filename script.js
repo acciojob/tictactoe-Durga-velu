@@ -1,6 +1,6 @@
 //your JS code here. If required.
-let user1=document.getElementById("player1")
-let user2=document.getElementById("player2")
+let user1=document.getElementById("player-1")
+let user2=document.getElementById("player-2")
 let startBtn=document.querySelector("#submit")
 let message=document.querySelector(".message")
 let cells=document.querySelectorAll(".cell")
