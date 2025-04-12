@@ -58,7 +58,7 @@ gameBoard.style.display="block"
        if(checkWinner()){
         disables();
        }
-        else if(!checkWinner() && count===9){
+        else if(!checkWinner() && count===8){
             message.textContent=`Match is Draw!`
             return ;
         }
