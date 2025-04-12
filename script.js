@@ -112,7 +112,7 @@ function checkWinner(){
 
                 }
               else{
-                position1=user2.value;
+                position2=user2.value;
                 message.innerText=`${position1} Congratulations you won!`
                 return true; 
                 
