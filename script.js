@@ -39,7 +39,7 @@ gameBoard.style.display="block"
          console.log(count);
          
         if(gameActive){
-            cell.innerText="X"
+            cell.innerText="x"
             currentPlayer=Player2
             message.textContent=`${currentPlayer.value}, you're up`
             gameActive=false;
@@ -48,7 +48,7 @@ gameBoard.style.display="block"
         else{
             currentPlayer=Player1
             message.textContent=`${currentPlayer.value}, you're up`
-              cell.innerText="O";
+              cell.innerText="o";
             gameActive=true
           
                           
