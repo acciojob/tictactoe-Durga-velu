@@ -101,7 +101,7 @@ function checkWinner(){
         if(position1 !=="" && position2!=="" && position3 !==""){
             if(position1===position2 && position2===position3){
                 
-                if(position1==="X"){
+                if(position1==="x"){
                     message.innerText=`${Player1.value}, Congratulations you won!`
                  
                     return true; 
