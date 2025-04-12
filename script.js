@@ -102,13 +102,13 @@ function checkWinner(){
             if(position1===position2 && position2===position3){
                 
                 if(position1==="x"){
-                    message.innerText=`${Player1.value}, congratulations you won!`
+                    message.innerText=`${Player1.value} congratulations you won!`
                  
                     return true; 
 
                 }
               else{
-                message.innerText=`${Player2.value}, congratulations you won!`
+                message.innerText=`${Player2.value} congratulations you won!`
                 return true; 
                 
               }
