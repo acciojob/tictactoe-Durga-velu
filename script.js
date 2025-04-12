@@ -1,6 +1,6 @@
 //your JS code here. If required.
-let user1=document.getElementById("player1")
-let user2=document.getElementById("player2")
+let Player1=document.getElementById("player1")
+let Player2=document.getElementById("player2")
 let startBtn=document.querySelector("#submit")
 let message=document.querySelector(".message")
 let cells=document.querySelectorAll(".cell")
@@ -11,9 +11,9 @@ let restart=document.querySelector("#Restart")
 let gameActive=false;
 
 let count=0;
-let currentPlayer=user1; 
+let currentPlayer=Player1; 
 function restartGame(){
-   currentPlayer=user1
+   currentPlayer=Player1
      gameActive=true;
        message.textContent=`${currentPlayer.value} you're up!`
     count=0;
@@ -25,7 +25,7 @@ function restartGame(){
    
     entrance.style.display="none"
 gameBoard.style.display="block"
-    if(user1.value.trim()=="" || user2.value.trim()==""){
+    if(Player1.value.trim()=="" || Player2.value.trim()==""){
         alert("Enter the both player name" );
         return;
     }
@@ -40,13 +40,13 @@ gameBoard.style.display="block"
          
         if(gameActive){
             cell.innerText="X"
-            currentPlayer=user2
+            currentPlayer=Player2
             message.textContent=`${currentPlayer.value} you're up!`
             gameActive=false;
                 
         }
         else{
-            currentPlayer=user1
+            currentPlayer=Player1
             message.textContent=`${currentPlayer.value} you're up!`
               cell.innerText="O";
             gameActive=true
@@ -104,14 +104,14 @@ function checkWinner(){
             if(position1===position2 && position2===position3){
                 
                 if(position1==="X"){
-                    position1=user1.value
+                    position1=Player1.value
                     message.innerText=`${position1} Congratulations you won!`
                  
                     return true; 
 
                 }
               else{
-                position2=user2.value;
+                position2=Player2.value;
                 message.innerText=`${position2} Congratulations you won!`
                 return true; 
                 
