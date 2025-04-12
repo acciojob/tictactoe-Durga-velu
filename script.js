@@ -31,7 +31,7 @@ gameBoard.style.display="block"
     }
  gameActive=true;
 
-            message.textContent=`${currentPlayer.value} you're up!`
+            message.textContent=`${currentPlayer.value}, you're up!`
         })
  cells.forEach((cell)=>{
         cell.addEventListener("click",(event)=>{
@@ -41,7 +41,7 @@ gameBoard.style.display="block"
         if(gameActive){
             cell.innerText="X"
             currentPlayer=Player2
-            message.textContent=`${currentPlayer.value} you're up!`
+            message.textContent=`${currentPlayer.value}, you're up!`
             gameActive=false;
                 
         }
