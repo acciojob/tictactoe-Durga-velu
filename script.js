@@ -17,7 +17,7 @@ function restartGame(){
    currentPlayer=user1
      gameActive=true;
        message.textContent=`${currentPlayer.value} you're up!`
-    
+    count=0;
     enablesCell();
   
 }
@@ -58,7 +58,7 @@ gameBoard.style.display="block"
        if(checkWinner()){
         disables();
        }
-        else if(!checkWinner() && count===9){
+        else if(!checkWinner() && count>=9){
             message.textContent=`Match is Draw!`
             return ;
         }
