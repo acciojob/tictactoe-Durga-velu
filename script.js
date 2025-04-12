@@ -41,13 +41,13 @@ gameBoard.style.display="block"
         if(gameActive){
             cell.innerText="X"
             currentPlayer=Player2
-            message.textContent=`${currentPlayer.value}, you're up!`
+            message.textContent=`${currentPlayer.value}, you're up`
             gameActive=false;
                 
         }
         else{
             currentPlayer=Player1
-            message.textContent=`${currentPlayer.value} you're up!`
+            message.textContent=`${currentPlayer.value} you're up`
               cell.innerText="O";
             gameActive=true
           
