@@ -11,7 +11,6 @@ let restart=document.querySelector("#Restart")
 let gameActive=false;
 
 let count=0;
-
 let currentPlayer=user1; 
 function restartGame(){
    currentPlayer=user1
